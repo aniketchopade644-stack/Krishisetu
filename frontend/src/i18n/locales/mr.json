@@ -19,6 +19,25 @@
     "kisan_helpline": "शेतकरी हेल्पलाइन (टोल-फ्री)",
     "helpline_desc": "24x7 शासकीय कृषी सल्लागार सहाय्य"
   },
+  "auth": {
+    "login": "लॉग इन",
+    "register": "नोंदणी",
+    "forgot_password": "पासवर्ड विसरलात?",
+    "reset_password": "पासवर्ड रीसेट करा",
+    "reset_password_subtitle": "पडताळणी कोड मिळवण्यासाठी आणि पासवर्ड रीसेट करण्यासाठी तुमचा नोंदणीकृत ईमेल प्रविष्ट करा.",
+    "back_to_login": "लॉग इन कडे परत जा",
+    "email_address": "ईमेल पत्ता",
+    "password": "पासवर्ड",
+    "new_password": "नवीन पासवर्ड",
+    "confirm_new_password": "नवीन पासवर्डची पुष्टी करा",
+    "verification_code": "६-अंकी पडताळणी कोड",
+    "send_code": "पडताळणी कोड पाठवा",
+    "resend_code": "कोड पुन्हा पाठवा",
+    "set_new_password": "नवीन पासवर्ड सेट करा",
+    "password_reset_success": "पासवर्ड यशस्वीरित्या रीसेट झाला! आता तुम्ही लॉग इन करू शकता.",
+    "passwords_do_not_match": "नवीन पासवर्ड जुळत नाहीत",
+    "enter_email_first": "कृपया आधी तुमचा ईमेल प्रविष्ट करा"
+  },
   "dashboard": {
     "welcome": "नमस्कार",
     "title": "शेतकरी कमांड सेंटर",

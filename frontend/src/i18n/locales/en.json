@@ -19,6 +19,25 @@
     "kisan_helpline": "Kisan Helpline (Toll-Free)",
     "helpline_desc": "24x7 Government Agro Advisory Support"
   },
+  "auth": {
+    "login": "Login",
+    "register": "Register",
+    "forgot_password": "Forgot password?",
+    "reset_password": "Reset Password",
+    "reset_password_subtitle": "Enter your registered email to receive a verification code and reset your password.",
+    "back_to_login": "Back to Login",
+    "email_address": "Email Address",
+    "password": "Password",
+    "new_password": "New Password",
+    "confirm_new_password": "Confirm New Password",
+    "verification_code": "6-Digit Verification Code",
+    "send_code": "Send Verification Code",
+    "resend_code": "Resend Code",
+    "set_new_password": "Set New Password",
+    "password_reset_success": "Password reset successfully! You can now log in.",
+    "passwords_do_not_match": "New passwords do not match",
+    "enter_email_first": "Please enter your email address first"
+  },
   "dashboard": {
     "welcome": "Welcome",
     "title": "Farmer Command Center",

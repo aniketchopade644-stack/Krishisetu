@@ -252,7 +252,7 @@ const seedDatabase = async () => {
         originalPrice: 999,
         stockQuantity: 45,
         unit: 'packet',
-        imageUrl: 'https://images.unsplash.com/photo-1592841200221-a6898f307baa?auto=format&fit=crop&w=600&q=80',
+        imageUrl: 'https://images.unsplash.com/photo-1592924357228-91a4daadcfea?auto=format&fit=crop&w=600&q=80',
         brand: 'Syngenta Seeds',
         rating: 4.9,
         reviewCount: 42,

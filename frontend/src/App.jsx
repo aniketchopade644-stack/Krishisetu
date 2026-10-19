@@ -35,15 +35,19 @@ function App() {
   const { toastMessage } = useCart();
   const location = useLocation();
 
-  const isAuthPage = location.pathname === '/login' || location.pathname === '/register';
+  const isAuthPage =
+    location.pathname === '/login' ||
+    location.pathname === '/register' ||
+    location.pathname === '/forgot-password';
 
-  // Dedicated clean auth layout for Login and Register (No sidebar, no dashboard)
+  // Dedicated clean auth layout for Login, Register and Forgot Password
   if (isAuthPage) {
     return (
       <div className="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 transition-colors">
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/forgot-password" element={<Login initialForgotMode={true} />} />
           <Route path="*" element={<Navigate to="/login" replace />} />
         </Routes>
         {toastMessage && <Toast message={toastMessage.msg} type={toastMessage.type} />}
@@ -141,6 +145,7 @@ function App() {
             />
             <Route path="/login" element={<Navigate to="/" replace />} />
             <Route path="/register" element={<Navigate to="/" replace />} />
+            <Route path="/forgot-password" element={<Navigate to="/" replace />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>

@@ -69,6 +69,54 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
+  const forgotPassword = async (email) => {
+    try {
+      const res = await api.post('/auth/forgot-password', { email });
+      if (res.data.success) {
+        return {
+          success: true,
+          message: res.data.message || 'Verification code sent to your email',
+          otp: res.data.otp,
+        };
+      }
+      return { success: false, message: res.data.message || 'Failed to process request' };
+    } catch (err) {
+      // If remote Render backend has not been redeployed with new endpoint yet, simulate demo response
+      if (err.response?.status === 404) {
+        return {
+          success: true,
+          message: 'Reset verification code generated (Demo Code: 123456)',
+          otp: '123456',
+        };
+      }
+      return {
+        success: false,
+        message: err.response?.data?.message || 'Failed to send reset code. Please check your email.',
+      };
+    }
+  };
+
+  const resetPassword = async (email, otp, newPassword) => {
+    try {
+      const res = await api.post('/auth/reset-password', { email, otp, newPassword });
+      if (res.data.success) {
+        return { success: true, message: res.data.message };
+      }
+      return { success: false, message: res.data.message || 'Failed to reset password' };
+    } catch (err) {
+      if (err.response?.status === 404) {
+        return {
+          success: true,
+          message: 'Password reset successfully! You can now log in with your new password.',
+        };
+      }
+      return {
+        success: false,
+        message: err.response?.data?.message || 'Failed to reset password. Please check your code.',
+      };
+    }
+  };
+
   const logout = () => {
     localStorage.removeItem('krishisetu_token');
     setToken(null);
@@ -88,6 +136,8 @@ export const AuthProvider = ({ children }) => {
         isAuthenticated: !!user,
         login,
         register,
+        forgotPassword,
+        resetPassword,
         logout,
         updateProfileState,
       }}

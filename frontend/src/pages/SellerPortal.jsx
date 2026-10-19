@@ -95,7 +95,7 @@ const SellerPortal = () => {
       ...formData,
       category: 'Crops/Produce',
       description: 'Farmer produce listed for sale',
-      imageUrl: 'https://images.unsplash.com/photo-1592841200221-a6898f307baa?auto=format&fit=crop&w=600&q=80',
+      imageUrl: 'https://images.unsplash.com/photo-1592924357228-91a4daadcfea?auto=format&fit=crop&w=600&q=80',
       price: Number(formData.price),
       originalPrice: Number(formData.price),
       stockQuantity: Number(formData.stockQuantity),
